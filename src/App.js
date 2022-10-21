@@ -8,8 +8,10 @@ function App() {
       <header className="App-header">
         <Logo />
 
+        <Logo />
       </header>
     </div>
+
   );
 }
 
