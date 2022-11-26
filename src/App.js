@@ -1,18 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import Logo from './components/Logo';
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
 
-        <Logo />
-      </header>
-    </div>
-
-  );
+    return <Navbar/>
 }
 
 export default App;
