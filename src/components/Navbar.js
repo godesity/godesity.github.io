@@ -5,16 +5,16 @@ export default function Navbar () {
             <a className="godesity-title" href="/"> GoDesity</a>
             <ul>
                <li>
-                <a href = "/lorem"> lorem </a>
+                <a href = "/omoss">Om oss</a>
                 </li> 
                 <li>
-                <a href = "/ipsum">ipsum</a>
+                <a href = "/projekt">Projekt</a>
                 </li>
                 <li>
-                <a href = "/dolor">dolor </a>
+                <a href = "/kunder">Kunder</a>
                 </li>
                 <li>
-                <a href = "/sit">sit</a>
+                <a href = "/kontakt">Kontakt</a>
                 </li>  
             </ul>
         </nav>

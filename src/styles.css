@@ -2,13 +2,22 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    margin: 0;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 50px;
 }
 
 .nav {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,9 +39,17 @@ body {
 }
 
 .nav li:hover {
-    background-color: cadetblue;
+    border-bottom: 0.5rem solid #00ff99;
 }
 
 .nav li:active {
-    background-color: blue;
+    background-color: rgb(107, 107, 107);
+}
+
+.page-frame {
+    padding: 300px;
+    max-width: 100%;
+    background: white;
+    border: 7px groove black;
+    color: blue;
 }
