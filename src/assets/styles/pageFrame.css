@@ -1,0 +1,32 @@
+.page-frame {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto max-content;
+    background: whitek center;
+    background-size: cover;
+    color: white;
+    width: 400px;
+    height: 300px;
+    padding: 2rem;
+}
+
+.page-frame:before,
+.page-frame:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.page-frame::before {
+    grid-row: 1 / 2;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.page-frame ::after {
+    grid-row: 1 / span 2;
+    border-left: none;
+}
