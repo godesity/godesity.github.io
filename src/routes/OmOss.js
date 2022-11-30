@@ -1,3 +1,3 @@
-export default function OmOss () {
-    return <div>Om oss</div>;
+export default function OmOss() {
+  return <div>Om oss</div>;
 }

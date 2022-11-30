@@ -1,4 +1,3 @@
-export default function Projekt () {
-    return <div>Projekt</div>;
-
+export default function Projekt() {
+  return <div>Projekt</div>;
 }
