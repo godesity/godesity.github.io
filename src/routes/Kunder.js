@@ -1,3 +1,5 @@
+import "../assets/styles/titleStyle.css"
+
 export default function Kunder() {
-  return <div>Kunder</div>;
+  return <div className="title-style">Kunder</div>;
 }

@@ -1,3 +1,5 @@
+import "../assets/styles/titleStyle.css"
+
 export default function Projekt() {
-  return <div>Projekt</div>;
+  return <div className="title-style">Projekt</div>;
 }
