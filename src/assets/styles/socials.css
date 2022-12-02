@@ -1,0 +1,16 @@
+.socials {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.socials img {
+  border-radius: 10px;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding: 1px;
+  display: block;
+}
