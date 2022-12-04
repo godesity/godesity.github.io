@@ -2,4 +2,35 @@
   font-size: 5vw;
   position: absolute;
   padding-left: 5%;
+  width: max-content;
+}
+
+.title-style::before,
+.title-style::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.title-style::before {
+  background: white;
+  animation: typing 5000ms steps(25) 2s forwards;
+}
+
+.title-style::after {
+  width: 0.2rem;
+  background: black;
+  animation: typing 5000ms steps(25) 2s forwards, blink 800ms infinite;
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
 }
