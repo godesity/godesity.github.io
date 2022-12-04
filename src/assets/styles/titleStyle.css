@@ -3,6 +3,7 @@
   position: absolute;
   padding-left: 5%;
   width: max-content;
+  font-weight: bold;
 }
 
 .title-style::before,
@@ -33,4 +34,13 @@
   to {
     background: transparent;
   }
+}
+
+.content-body {
+  position: absolute;
+  margin-top: 100px;
+  max-width: 1200px;
+  text-align: justify;
+  padding: 30px;
+  box-sizing: border-box;
 }

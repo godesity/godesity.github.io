@@ -7,11 +7,10 @@ import Kvadrat from "../assets/imgs/logo/kvadrat.png";
 export default function Socials() {
     return (
         <div className="socials">
-            <img src={Github} alt="Github" />
-            <img src={LinkedIn} alt="LinkedIn" />
-            <img src={Email} alt="Email" />
-            <img src={Kvadrat} alt="Kvadrat" />
+            <a href="https://github.com/jolin1337"><img src={Github} alt="Github" /></a>
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jolin1337/"><img src={LinkedIn} alt="LinkedIn" /></a>
+            <a href="mailto:johannes@godesity.se"><img src={Email} alt="Email" /></a>
+            <a target="_blank" rel="noreferrer" href="https://kvadrat.se/anlita-kvadrat/hitta-konsult/johannes-lind%C3%A9n/"><img src={Kvadrat} alt="Kvadrat" /></a>
         </div>
     );
-
 }

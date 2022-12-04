@@ -1,12 +1,14 @@
 import "../assets/styles/navbar.css";
 import { Outlet, Link } from "react-router-dom";
+import gd from "../assets/imgs/gd.png";
 
 export default function Navbar() {
   return (
     <>
       <nav className="nav">
         <Link className="godesity-title" to="/">
-          GoDesity
+          <img height="50" src={gd} alt="GoDesity" valign="middle"/>
+          Go Desity AB
         </Link>
         <ul>
           <li>

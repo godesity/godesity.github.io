@@ -2,4 +2,5 @@ body {
     display: grid;
     min-height: 100vh;
     place-items: center;
+    font-family: 'monospace', 'Courier New', Courier, monospace;
 }
