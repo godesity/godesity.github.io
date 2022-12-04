@@ -14,13 +14,13 @@
 
 .title-style::before {
   background: white;
-  animation: typing 5000ms steps(25) 2s forwards;
+  animation: typing 700ms steps(25) 2s forwards;
 }
 
 .title-style::after {
   width: 0.2rem;
   background: black;
-  animation: typing 5000ms steps(25) 2s forwards, blink 800ms infinite;
+  animation: typing 700ms steps(25) 2s forwards, blink 1000ms 1;
 }
 
 @keyframes typing {
