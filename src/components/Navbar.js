@@ -7,8 +7,7 @@ export default function Navbar() {
     <>
       <nav className="nav">
         <Link className="godesity-title" to="/">
-          <img height="50" src={gd} alt="GoDesity" valign="middle"/>
-          Go Desity AB
+          <img height="60" src={gd} alt="GoDesity" valign="middle"/>
         </Link>
         <ul>
           <li>

@@ -1,7 +1,7 @@
 .title-style {
   font-size: 5vw;
   position: absolute;
-  padding-left: 5%;
+  padding-left: 2.5%;
   width: max-content;
   font-weight: bold;
 }
@@ -41,6 +41,6 @@
   margin-top: 100px;
   max-width: 1200px;
   text-align: justify;
-  padding: 30px;
+  padding: 2.5%;
   box-sizing: border-box;
 }
