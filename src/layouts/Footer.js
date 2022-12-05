@@ -1,10 +1,10 @@
+import "../assets/styles/footerStyle.css"
+
 export default function Footer() {
-    const footerStyle = {
-        color: "gray",
-        padding: "10px",
-        fontFamily: "Arial",
-        fontSize: "x-small",
-        textAlign: "center"
-    };
-    return <p style={footerStyle}>Copyright © 2022-2023 GoDesity AB. All Rights Reserved</p>;
+
+    return (
+        <div className="footerStyle">
+            <p >Copyright © 2022-2023 Go Desity AB. All Rights Reserved</p>
+        </div>
+    );
 }
