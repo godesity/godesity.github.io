@@ -25,6 +25,13 @@
     animation: typing 700ms steps(25) 2s forwards, blink 1000ms 1;
   }
 
+  .project-card-container {
+    position: absolute;
+    overflow: auto;
+    white-space: inherit;
+    padding: 10%;
+  }
+
   @keyframes typing {
     to {
       left: 100%;
@@ -92,4 +99,11 @@
   text-align: justify;
   padding: 2.5%;
   box-sizing: border-box;
+}
+
+.project-card-container {
+  position: absolute;
+  overflow: auto;
+  white-space: inherit;
+  padding: 10%;
 }

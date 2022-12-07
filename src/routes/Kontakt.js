@@ -1,4 +1,4 @@
-import "../assets/styles/titleStyle.css"
+import "../assets/styles/projectStyle.css"
 import "../assets/styles/contactForm.css"
 
 export default function Kontakt() {

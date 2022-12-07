@@ -1,4 +1,4 @@
-import "../assets/styles/titleStyle.css"
+import "../assets/styles/projectStyle.css"
 
 export default function OmOss() {
   return (<div>
