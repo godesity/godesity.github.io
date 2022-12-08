@@ -1,4 +1,7 @@
 .contact-form-style {
   position: absolute;
   padding: 5%;
+  display: block;
+  width: -webkit-fill-available;
+  margin-right: 10%;
 }

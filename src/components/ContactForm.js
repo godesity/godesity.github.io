@@ -6,7 +6,7 @@ const ContactForm = () => {
     const [formStatus, setFormStatus] = React.useState('Skicka')
     const onSubmit = (e) => {
         e.preventDefault()
-        setFormStatus('Submitting...')
+        setFormStatus('Skickar...')
         const { name, email, message } = e.target.elements
         let conFom = {
             name: name.value,
@@ -37,7 +37,7 @@ const ContactForm = () => {
                         </label>
                         <textarea className="form-control" id="message" required />
                     </div>
-                    <button className="btn btn-danger" type="submit">
+                    <button className="btn btn-success btn-lg" type="submit">
                         {formStatus}
                     </button>
                 </form>
