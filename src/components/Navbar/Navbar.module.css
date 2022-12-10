@@ -69,6 +69,28 @@ ul.menu {
   background-color: lightgrey;
 }
 
+.path {
+  stroke-dasharray: 117;
+  stroke-dashoffset: 117;
+  animation: dashLogo 4s ease;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dashLogo {
+  0% {
+    stroke-dashoffset: 117;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -117;
+  }
+}
+
 #menucheck {
   display: none;
 }
