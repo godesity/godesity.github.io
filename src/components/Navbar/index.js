@@ -1,22 +1,24 @@
-import "../assets/styles/navbar.css";
+import styles from "./Navbar.module.css";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import gd from "../assets/imgs/gd.png";
+import gd from "../../assets/imgs/gd.png";
 
+console.log(styles)
 export default function Navbar() {
   const { pathname } = useLocation();
   const classNames = (path) => {
     const paths = ['/omoss', '/projekt', '/kunder', '/kontakt'];
     const idx = paths.indexOf(path);
-    return [pathname === path ? 'active' : '', paths.slice(idx).includes(pathname) ? 'line' : ''].filter(e => !!e).join(' ')
+    return [pathname === path ? styles.active : '', paths.slice(idx).includes(pathname) ? styles.line : ''].filter(e => !!e).join(' ')
   }
   return (
     <>
-      <nav className="nav">
+      <nav className={styles.nav}>
         <Link className="godesity-title" to="/">
           <img height="60" src={gd} alt="GoDesity" valign="middle" />
         </Link>
-        <ul>
-          <li className="separator"></li>
+        <input type="checkbox" id={styles.menucheck} />
+        <ul className={styles.menu}>
+          <li className={styles.separator}><label for={styles.menucheck}>=</label></li>
           <li className={classNames('/omoss')}>
             <Link to="/omoss">Om oss</Link>
           </li>

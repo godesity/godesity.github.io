@@ -1,11 +1,10 @@
-import "../assets/styles/projectStyle.css"
-import ProjectCard from "../components/ProjectCard.js";
+import ProjectCard from "../components/ProjectCard";
+import Page from "../layouts/Page";
 
 export default function Projekt() {
   return (
-    <>
-      <div className="title-style">Projekt</div>
+    <Page title="Projekt">
       <ProjectCard />
-    </>
+    </Page>
   );
 }

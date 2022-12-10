@@ -1,5 +1,5 @@
-import "../assets/styles/projectStyle.css"
+import Page from "../layouts/Page";
 
 export default function NoPage() {
-  return <div className="title-style" style={{ color: "red" }}>Error 404. Page not found</div>;
+  return <Page title="Error 404. Page not found" style={{ color: "red" }}></Page>;
 }

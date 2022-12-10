@@ -1,0 +1,55 @@
+.titleStyle {
+  font-size: 5vw;
+  position: absolute;
+  padding-left: 2.5%;
+  width: max-content;
+  font-weight: bold;
+}
+
+.titleStyle::before,
+.titleStyle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.titleStyle::before {
+  background: white;
+  width: 130%;
+  animation: typing 700ms steps(25) 500ms forwards;
+  margin-left: -0.3rem;
+}
+
+.titleStyle::after {
+  width: 0.3rem;
+  margin-left: -0.3rem;
+  background: black;
+  animation: typing 700ms steps(25) 500ms forwards, blink 1000ms 1;
+}
+
+@keyframes typing {
+  to {
+    left: 110%;
+    width: 0.2rem;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.contentBody {
+  max-width: 1200px;
+  width: 100%;
+  text-align: justify;
+  padding: 130px 100px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 820px) {
+  .contentBody {
+    padding: 60px 20px 20px 20px;
+  }
+}

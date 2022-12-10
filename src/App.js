@@ -1,27 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../src/assets/styles/styles.css";
-import Main from "../src/layouts/Main.js";
-import Footer from "../src/layouts/Footer.js";
-import OmOss from "../src/routes/OmOss.js";
-import Projekt from "../src/routes/Projekt.js";
-import Kunder from "../src/routes/Kunder.js";
-import Kontakt from "../src/routes/Kontakt.js";
-import NoPage from "../src/routes/NoPage.js";
+import Main from "../src/layouts/Main";
+import Footer from "../src/layouts/Footer";
+import OmOss from "../src/routes/OmOss";
+import Projekt from "../src/routes/Projekt";
+import Kunder from "../src/routes/Kunder";
+import Kontakt from "../src/routes/Kontakt";
+import NoPage from "../src/routes/NoPage";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />}>
+        <Main>
+          <Routes>
             <Route index element={<OmOss />} />
-            <Route path="omoss" element={<OmOss />} />
-            <Route path="projekt" element={<Projekt />} />
-            <Route path="kunder" element={<Kunder />} />
-            <Route path="Kontakt" element={<Kontakt />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
-        </Routes>
+            <Route path="/omoss" element={<OmOss />} />
+            <Route path="/projekt" element={<Projekt />} />
+            <Route path="/kunder" element={<Kunder />} />
+            <Route path="/Kontakt" element={<Kontakt />} />
+            <Route path="/*" element={<NoPage />} />
+          </Routes>
+        </Main>
       </BrowserRouter>
       <Footer />
     </>

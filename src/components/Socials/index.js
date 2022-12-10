@@ -1,12 +1,12 @@
-import "../assets/styles/socials.css";
-import Github from "../assets/imgs/logo/github.png";
-import LinkedIn from "../assets/imgs/logo/linkedin.png";
-import Email from "../assets/imgs/logo/email.png";
-import Kvadrat from "../assets/imgs/logo/kvadrat.png";
+import styles from "./Socials.module.css";
+import Github from "../../assets/imgs/logo/github.png";
+import LinkedIn from "../../assets/imgs/logo/linkedin.png";
+import Email from "../../assets/imgs/logo/email.png";
+import Kvadrat from "../../assets/imgs/logo/kvadrat.png";
 
 export default function Socials() {
     return (
-        <div className="socials">
+        <div className={styles.socials}>
             <a href="https://github.com/jolin1337"><img src={Github} alt="Github" /></a>
             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jolin1337/"><img src={LinkedIn} alt="LinkedIn" /></a>
             <a href="mailto:johannes@godesity.se"><img src={Email} alt="Email" /></a>

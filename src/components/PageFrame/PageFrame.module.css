@@ -1,0 +1,11 @@
+.pageFrame {
+  background: white;
+  max-width: 1200px;
+  width: 90vw;
+
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+  padding-bottom: 20px;
+  position: relative;
+}
