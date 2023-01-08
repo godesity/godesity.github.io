@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import Logo from "../Logo";
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -12,16 +13,7 @@ export default function Navbar() {
     <>
       <nav className={styles.nav}>
         <Link className="godesity-title" to="/">
-          <svg viewBox="139.852 76.482 86.452 60.502" xmlns="http://www.w3.org/2000/svg" alt="GoDesity" valign="middle" style={{ width: "90px", height: "60px" }}>
-            <g>
-              <polyline className={styles.path} style={{ fill: "none", stroke: "#000", opacity: '0.9', strokeWidth: "7px" }}
-                points="175 85 157 85 145 100 157 115 175 115">
-              </polyline>
-              <polyline className={styles.path2} style={{ fill: "none", stroke: "#000", opacity: '0.9', strokeWidth: "7px" }}
-                points="165 105 181 105 181 125 195 125 207 109 195 93 175 93">
-              </polyline>
-            </g>
-          </svg>
+          <Logo />
 
         </Link>
         <input type="checkbox" id={styles.menucheck} />
