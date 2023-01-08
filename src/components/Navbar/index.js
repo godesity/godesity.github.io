@@ -1,8 +1,6 @@
 import styles from "./Navbar.module.css";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import gd from "../../assets/imgs/gd.svg";
 
-console.log(styles)
 export default function Navbar() {
   const { pathname } = useLocation();
   const classNames = (path) => {
@@ -16,16 +14,10 @@ export default function Navbar() {
         <Link className="godesity-title" to="/">
           <svg viewBox="139.852 76.482 86.452 60.502" xmlns="http://www.w3.org/2000/svg" alt="GoDesity" valign="middle" style={{ width: "90px", height: "60px" }}>
             <g>
-              <polyline style={{ fill: "none", stroke: "#000", strokeWidth: "7px" }}
+              <polyline className={styles.path} style={{ fill: "none", stroke: "#000", opacity: '0.9', strokeWidth: "7px" }}
                 points="175 85 157 85 145 100 157 115 175 115">
               </polyline>
-              <polyline style={{ fill: "none", stroke: "#000", strokeWidth: "7px" }}
-                points="165 105 181 105 181 125 195 125 207 109 195 93 175 93">
-              </polyline>
-              <polyline className={styles.path} style={{ fill: "none", stroke: "chocolate", opacity: '0.7', animationDelay: '1s', strokeWidth: "2px" }}
-                points="175 85 157 85 145 100 157 115 175 115">
-              </polyline>
-              <polyline className={styles.path} style={{ fill: "none", stroke: "chocolate", opacity: '0.7', animationDelay: '1s', strokeWidth: "2px" }}
+              <polyline className={styles.path2} style={{ fill: "none", stroke: "#000", opacity: '0.9', strokeWidth: "7px" }}
                 points="165 105 181 105 181 125 195 125 207 109 195 93 175 93">
               </polyline>
             </g>

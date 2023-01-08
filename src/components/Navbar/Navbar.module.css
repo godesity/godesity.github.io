@@ -69,16 +69,25 @@ ul.menu {
 }
 
 .path {
-  stroke-dasharray: 117;
-  stroke-dashoffset: 117;
-  animation: dashLogo 4s ease;
+  stroke-dasharray: 74.419, 10;
+  stroke-dashoffset: 74.419;
+  animation: dashLogo 3s linear;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+.path2 {
+  stroke-dasharray: 110, 10;
+  stroke-dashoffset: 0;
+  animation: dashLogo2 3s linear;
   animation-fill-mode: backwards;
   animation-iteration-count: infinite;
 }
 
 @keyframes dashLogo {
   0% {
-    stroke-dashoffset: 117;
+    stroke-dashoffset: 84.419;
+    /*calc((74.419 + 10));*/
   }
 
   50% {
@@ -86,7 +95,22 @@ ul.menu {
   }
 
   100% {
-    stroke-dashoffset: -117;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashLogo2 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -120;
+    /*calc(120 + 10);*/
   }
 }
 
