@@ -38,6 +38,9 @@ export default function Logo({ duration, duration2 }) {
                     points="165 105 181 105 181 125 195 125 207 109 195 93 175 93">
                 </polyline>
             </g>
+            <rect x="164" y="100" width="5" height="4" fill="white"></rect>
+            <rect x="171" y="115" width="5" height="4" fill="white"></rect>
+            <rect x="174" y="89" width="5" height="4" fill="white"></rect>
         </svg>
     );
 }

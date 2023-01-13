@@ -60,12 +60,20 @@ ul.menu {
   overflow: hidden;
 }
 
-.nav li.line {
+.nav ul.menu {
+  position: relative;
+}
+
+.nav li.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   border-bottom: 2px solid #000;
+  transition: width 0.1s ease-in-out;
 }
 
 .nav li.active {
-  background-color: lightgrey;
+  box-shadow: 0 0 20px #aaa;
 }
 
 #menucheck {
