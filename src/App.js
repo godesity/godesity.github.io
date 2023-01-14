@@ -8,6 +8,8 @@ import Kunder from "../src/routes/Kunder";
 import Kontakt from "../src/routes/Kontakt";
 import NoPage from "../src/routes/NoPage";
 
+
+
 function App() {
   return (
     <>
