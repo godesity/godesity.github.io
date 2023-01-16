@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Button from 'react-bootstrap/Button';
-import styles from './Card.module.css';
 
 export default function Card(props) {
     const { title, description, actionText, coverImage } = props;

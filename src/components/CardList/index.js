@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import Button from 'react-bootstrap/Button';
 import styles from './CardList.module.css';
 
 export default function CardList(props) {

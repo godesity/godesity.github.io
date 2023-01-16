@@ -1,6 +1,6 @@
 import Page from "../layouts/Page";
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchCustomers, setCustomers } from '../store/customers'
+import { fetchCustomers } from '../store/customers'
 import { useEffect } from "react";
 import Card from "../components/Card";
 import CardList from "../components/CardList"
@@ -10,7 +10,7 @@ export default function Kunder() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCustomers());
-  }, []);
+  }, [dispatch]);
   return (
     <Page title="Kunder">
       Vi vill upprätthålla en god kommunikation till våra kunder. Därför finns det kontaktmöjligheter så som e-post och telefon. Du som kund kan när som helst få uppdateringar om hur utvecklingen av produkten går och vid varje milstolpe informerar vi dig om alternativa lösningar om nuvarande läge.
