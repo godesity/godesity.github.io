@@ -6,7 +6,8 @@
 }
 
 .card {
-    padding: 10%;
+    max-height: 300px;
+    overflow: hidden;
 }
 
 .card img {

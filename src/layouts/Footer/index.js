@@ -4,7 +4,7 @@ export default function Footer() {
 
     return (
         <div className={styles.footerStyle}>
-            <p >Copyright © 2022-2023 Go Desity AB. All Rights Reserved</p>
+            <p >Copyright © {new Date().getFullYear() - 1} - {new Date().getFullYear()} Go Desity AB. All Rights Reserved</p>
         </div>
     );
 }

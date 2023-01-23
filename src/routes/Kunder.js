@@ -17,7 +17,7 @@ export default function Kunder() {
       Om du vill komma i kontakt med oss så finns det här ett antal kontakt metoder.
       <CardList>
         {customers.map((c, i) =>
-          <Card key={i} title={c.title.rendered} description={c.excerpt.rendered} coverImage={c.jetpack_featured_media_url}></Card>
+          <Card key={i} title={c.title.rendered} description={c.excerpt.rendered} coverImage={c.jetpack_featured_media_url} actionText="Visa mer" ></Card>
 
         )}
       </CardList>
