@@ -7,7 +7,34 @@
 
 .card {
     max-height: 300px;
+    min-height: 300px;
     overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.1s linear;
+    border: none;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    transition: height 0.2s linear;
+    background-image: linear-gradient(transparent, white);
+}
+
+.card:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    background-image: linear-gradient(transparent, white);
 }
 
 .card img {
@@ -16,9 +43,32 @@
     filter: grayscale(100%);
 }
 
+.cardImageContainer {
+    max-height: 137px;
+    min-height: 137px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 137px;
+}
+
+.cardImage {
+    max-height: 137px;
+    max-width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .card img:hover {
     -webkit-filter: grayscale(0%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
     cursor: pointer;
+}
+
+.cardAction {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 10px;
 }

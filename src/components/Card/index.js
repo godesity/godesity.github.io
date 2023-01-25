@@ -7,13 +7,13 @@ export default function Card(props) {
     return (
         <div className="col-12 col-md-6 col-lg-4">
             <div className={styles.card + ' card'}>
-                <div style={{ maxHeight: '137px', minHeight: '137px', maxWidth: '300px', overflow: 'hidden', }}>
-                    <img src={coverImage} alt={title} style={{ height: "137px", marginTop: 'auto', marginBottom: 'auto' }} />
+                <div className={styles.cardImageContainer}>
+                    <img src={coverImage} alt={title} className={styles.cardImage} />
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{(description || 'no content').replace(/<[^>]+>/g, '').replace('hellip')}</p>
-                    {actionText && <Button variant="primary">{actionText}</Button>}
+                    {actionText && <Button className={styles.cardAction} variant="primary">{actionText}</Button>}
                 </div>
             </div>
         </div>
