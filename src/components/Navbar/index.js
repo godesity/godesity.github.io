@@ -10,7 +10,7 @@ export default function Navbar() {
   const classNames = (path) => {
     const paths = ['/omoss', '/projekt', '/kunder', '/kontakt'];
     const idx = paths.indexOf(path);
-    const activeClass = pathname === path ? styles.active : '';
+    const activeClass = pathname.startsWith(path) ? styles.active : '';
     const linebeforeActiveClass = paths.slice(idx).includes(pathname) ? styles.line : '';
     return [activeClass, linebeforeActiveClass].filter(e => !!e).join(' ')
   }
@@ -20,11 +20,20 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <Link className="godesity-title" to="/">
           <Logo />
-
         </Link>
-        <input type="checkbox" id={styles.menucheck} />
+        <input type="checkbox" id={styles.menucheck} defaultChecked />
         <ul className={styles.menu}>
-          <li className={styles.separator}><label htmlFor={styles.menucheck}>=</label></li>
+          <li className={styles.separator}>
+            <label htmlFor={styles.menucheck}>
+              {/*
+              <svg viewBox="0 0 100 80" width="100" height="80">
+                <rect width="100" height="20" fill="black"></rect>
+                <rect y="30" width="100" height="20" fill="black"></rect>
+                <rect y="60" width="100" height="20" fill="black"></rect>
+              </svg>
+              */}
+            </label>
+          </li>
           <li className={classNames('/omoss')} onMouseOver={() => setHoverItem('/omoss')} onMouseLeave={() => setHoverItem(null)}>
             <Link to="/omoss">Om oss</Link>
           </li>
