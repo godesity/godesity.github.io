@@ -6,15 +6,16 @@ import Logo from "../Logo";
 export default function Navbar() {
   const { pathname } = useLocation();
   const [hoverItem, setHoverItem] = useState();
+  const userLocation = pathname === '/' ? '/omoss' : pathname;
 
   const classNames = (path) => {
     const paths = ['/omoss', '/projekt', '/kunder', '/kontakt'];
     const idx = paths.indexOf(path);
-    const activeClass = pathname.startsWith(path) ? styles.active : '';
-    const linebeforeActiveClass = paths.slice(idx).includes(pathname) ? styles.line : '';
+    const activeClass = userLocation.startsWith(path) ? styles.active : '';
+    const linebeforeActiveClass = paths.slice(idx).includes(userLocation) ? styles.line : '';
     return [activeClass, linebeforeActiveClass].filter(e => !!e).join(' ')
   }
-  const underlineWidth = (['/omoss', '/projekt', '/kunder', '/kontakt'].indexOf(hoverItem || pathname) + 1) * 72;
+  const underlineWidth = (['/omoss', '/projekt', '/kunder', '/kontakt'].indexOf(hoverItem || userLocation) + 1) * 72;
   return (
     <>
       <nav className={styles.nav}>
