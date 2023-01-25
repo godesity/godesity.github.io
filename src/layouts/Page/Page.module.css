@@ -4,6 +4,7 @@
   padding-left: 2.5%;
   width: max-content;
   font-weight: bold;
+  max-width: 50vw;
 }
 
 .titleStyle::before,

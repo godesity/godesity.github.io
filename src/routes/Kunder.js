@@ -1,9 +1,9 @@
 import Page from "../layouts/Page";
-import { useSelector, useDispatch } from 'react-redux'
-import { fetchCustomers } from '../store/customers'
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCustomers } from "../store/customers";
 import { useEffect } from "react";
 import Card from "../components/Card";
-import CardList from "../components/CardList"
+import CardList from "../components/CardList";
 
 export default function Kunder() {
   const customers = useSelector((state) => state.customers.value);
@@ -17,8 +17,7 @@ export default function Kunder() {
       Om du vill komma i kontakt med oss så finns det här ett antal kontakt metoder.
       <CardList>
         {customers.map((c, i) =>
-          <Card key={i} title={c.title.rendered} description={c.excerpt.rendered} coverImage={c.jetpack_featured_media_url} actionText="Visa mer" ></Card>
-
+          <Card key={i} title={c.title.rendered} description={c.excerpt.rendered} coverImage={c.jetpack_featured_media_url} actionLink={"/kunder/" + c.id}></Card>
         )}
       </CardList>
     </Page>

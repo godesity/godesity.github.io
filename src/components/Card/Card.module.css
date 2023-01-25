@@ -11,11 +11,14 @@
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.1s linear;
-    border: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    color: inherit;
 }
 
 .card::after {

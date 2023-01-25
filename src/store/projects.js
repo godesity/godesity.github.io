@@ -1,28 +1,32 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const projectSlice = createSlice({
     name: 'projects',
     initialState: {
         value: [],
+        loading: false
     },
-    reducers: {
-        increment: (state) => {
-            // Redux Toolkit allows us to write "mutating" logic in reducers. It
-            // doesn't actually mutate the state because it uses the Immer library,
-            // which detects changes to a "draft state" and produces a brand new
-            // immutable state based off those changes
-            state.value += 1
-        },
-        decrement: (state) => {
-            state.value -= 1
-        },
-        incrementByAmount: (state, action) => {
-            state.value += action.payload
-        },
-    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchProjects.pending, (state) => {
+            state.loading = true;
+        });
+        builder.addCase(fetchProjects.fulfilled, (state, action) => {
+            state.loading = false;
+            state.value = action.payload;
+        });
+        builder.addCase(fetchProjects.rejected, (state, action) => {
+            state.loading = false;
+            state.value = [];
+            console.log(action.error.message);
+        });
+    }
 })
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = projectSlice.actions
 
+export const fetchProjects = createAsyncThunk('projects/fetchProjects', () => {
+    return fetch("https://blog.godesity.se/wp-json/wp/v2/posts?categories=5")
+        .then(request => request.json())
+});
+// Action creators are generated for each case reducer function
+export const { setprojects } = projectSlice.actions
 export default projectSlice.reducer

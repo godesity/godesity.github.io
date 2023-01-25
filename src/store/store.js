@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import customerReducer from './customers'
-import projectReducer from './projects'
+import customersReducer from './customers'
+import projectsReducer from './projects'
+import postReducer from './post'
 
 export default configureStore({
     reducer: {
-        customers: customerReducer,
-        projects: projectReducer,
+        customers: customersReducer,
+        customer: postReducer,
+        projects: projectsReducer,
+        project: postReducer,
     },
 })

@@ -3,7 +3,7 @@ import Logo from '../../components/Logo';
 import { useSelector } from "react-redux";
 
 export default function Kunder(props) {
-  const loading = useSelector((state) => state.customers.loading || state.projects.loading);
+  const loading = useSelector((state) => state.customers.loading || state.projects.loading || state.project.loading || state.customer.loading);
   const { title, children } = props;
   return (
     <div>
