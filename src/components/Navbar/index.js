@@ -7,15 +7,17 @@ export default function Navbar() {
   const { pathname } = useLocation();
   const [hoverItem, setHoverItem] = useState();
   const userLocation = pathname === '/' ? '/omoss' : pathname;
+  const firstUserLocation = userLocation.split('/').slice(0, 2).join('/');
 
   const classNames = (path) => {
     const paths = ['/omoss', '/projekt', '/kunder', '/kontakt'];
+    const activeClass = firstUserLocation === path ? styles.active : '';
+
     const idx = paths.indexOf(path);
-    const activeClass = userLocation.startsWith(path) ? styles.active : '';
-    const linebeforeActiveClass = paths.slice(idx).includes(userLocation) ? styles.line : '';
-    return [activeClass, linebeforeActiveClass].filter(e => !!e).join(' ')
+    const linebeforeActiveClass = paths.slice(idx).includes(firstUserLocation) ? styles.line : '';
+    return [activeClass, linebeforeActiveClass].filter(e => !!e).join(' ');
   }
-  const underlineWidth = (['/omoss', '/projekt', '/kunder', '/kontakt'].indexOf(hoverItem || userLocation) + 1) * 72;
+  const underlineWidth = (['/omoss', '/projekt', '/kunder', '/kontakt'].indexOf(hoverItem || firstUserLocation) + 1) * 72;
   return (
     <>
       <nav className={styles.nav}>

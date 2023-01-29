@@ -113,6 +113,7 @@ ul.menu {
     height: 0px;
     transition: height 1s ease;
     display: inline-block;
+    border-bottom: 3px solid #333;
     overflow: hidden;
   }
 

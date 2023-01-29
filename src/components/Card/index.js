@@ -17,7 +17,7 @@ export default function Card(props) {
         </>);
     }
     return (
-        <div className="col-12 col-md-6 col-lg-4">
+        <div>
             {!actionText && <Link className={styles.card + ' card'} to={actionLink}> {renderCard()} </Link>}
             {actionText && <div className={styles.card + ' card'}> {renderCard()} </div>}
         </div>

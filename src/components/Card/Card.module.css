@@ -13,10 +13,11 @@
     transition: box-shadow 0.1s linear;
     text-decoration: none;
     color: inherit;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(50, 50, 100, 0.4);
     text-decoration: none;
     color: inherit;
 }
