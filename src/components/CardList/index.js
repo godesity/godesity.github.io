@@ -20,7 +20,14 @@ export default function CardList(props) {
     const renderItem = (item, idx) => {
         let i = childrenHighlight.findIndex(c => idx === c);
         if (i < 0) i = idx;
-        const styleItem = [styles.cardItem0, styles.cardItem1, styles.cardItem2, styles.cardItem3, styles.cardItem4][i];
+        const styleItems = [styles.cardItem1, styles.cardItem2, styles.cardItem3];
+        if (children.length > 3) {
+            styleItems.unshift(styles.cardItem0);
+        }
+        if (children.length > 4) {
+            styleItems.push(styles.cardItem4);
+        }
+        const styleItem = styleItems[i];
         return (
             <div key={idx} className={`col-12 col-md-6 col-lg-4 ${styles.cardItem} ${styleItem}`}>
                 {item}

@@ -111,6 +111,17 @@
         border-bottom: 3px solid #000;
     }
 
+    .cardItem0,
+    .cardItem1,
+    .cardItem2,
+    .cardItem3,
+    .cardItem4 {
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+    }
+
+
     .gt,
     .lt {
         display: none;
