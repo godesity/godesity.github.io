@@ -25,6 +25,7 @@
   float: right;
   margin-top: -175px;
   margin-right: -11px;
+  transition: margin-top 200ms linear 100ms;
 }
 
 .socials img {
@@ -36,4 +37,36 @@
   height: auto;
   padding: 3px 0;
   display: block;
+}
+
+.socials a {
+  position: relative;
+}
+
+.socials a::after {
+  position: absolute;
+  right: calc(30px + 10px);
+  color: black;
+  top: 0px;
+  content: attr(alt);
+  width: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  padding: 0;
+}
+
+.socials a:hover::after {
+  border: 1px solid #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  animation: typing 200ms steps(13) 50ms forwards;
+}
+
+@keyframes typing {
+  to {
+    width: 70px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
