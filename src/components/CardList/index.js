@@ -34,7 +34,6 @@ export default function CardList(props) {
             </div>
         );
     }
-    const sizes = [1, 1.3, 1];
     return (
         <div className={styles.card}>
             <div className={"container " + styles.cardContainer}>
